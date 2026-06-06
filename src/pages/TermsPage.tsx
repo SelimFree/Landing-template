@@ -5,10 +5,14 @@ import { Heading } from "../components/ui/Heading";
 import { Text } from "../components/ui/Text";
 import { List, ListItem } from "../components/ui/List";
 import { useAppContext } from "../context/AppContext";
+import { useDocumentTitle } from "../hooks/useDocumentTitle";
 
 export default function TermsPage() {
   const { t } = useTranslation("legal");
   const { companyName, country } = useAppContext();
+
+  const { t: tCommon } = useTranslation("common");
+  useDocumentTitle(tCommon("navbar.terms"));
 
 
   const Bullet = <Circle className="h-2 w-2 fill-current mt-2" />;

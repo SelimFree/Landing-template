@@ -4,6 +4,7 @@ import LegalPage from "./LegalPage";
 import { Heading } from "../components/ui/Heading";
 import { Text } from "../components/ui/Text";
 import { List, ListItem } from "../components/ui/List";
+import { useDocumentTitle } from "../hooks/useDocumentTitle";
 
 interface CookieDataItem {
   label: string;
@@ -12,6 +13,9 @@ interface CookieDataItem {
 
 export default function CookiePage() {
   const { t } = useTranslation("legal");
+
+  const { t: tCommon } = useTranslation("common");
+  useDocumentTitle(tCommon("navbar.cookie"));
 
   const Bullet = <Circle className="h-2 w-2 fill-current mt-2" />;
 
