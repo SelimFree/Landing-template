@@ -1,8 +1,10 @@
 import { createContext, useContext } from 'react';
+import type { LanguageOption } from '../components/types/languages';
 
 export interface AppProps {
   companyName: string;
   country: string;
+  languages: LanguageOption[];
 }
 
 export const AppContext = createContext<AppProps | null>(null);
