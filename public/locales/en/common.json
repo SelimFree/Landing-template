@@ -1,6 +1,9 @@
 {
   "navbar": {
-    "home": "Home"
+    "home": "Home",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookie": "Cookie Policy"
   },
 
   "footer": {
